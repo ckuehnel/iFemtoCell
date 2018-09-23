@@ -1,7 +1,7 @@
 #!/bin/sh
 
-uptime > UPT
-MSG=`cat UPT`
+uptime > /user/UPT
+MSG=`cat /user/UPT`
 echo -n Uptime:
 echo "$MSG"
 
