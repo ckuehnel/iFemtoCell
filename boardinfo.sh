@@ -18,5 +18,8 @@ free -m
 df -h
 echo
 echo "--- CPU Temperature ---------------"
-cat /sys/class/hwmon/hwmon0/temp1_input
-echo
+temp=`cat /sys/class/hwmon/hwmon0/temp1_input`
+echo -n $(( ($temp +500)/1000 ))
+echo " °C"
+
+
